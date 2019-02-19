@@ -1,0 +1,7 @@
+#!/bin/sh
+yay="yay-original"
+if [[ $EUID -ne 0 ]]; then
+    "$yay" "$@"
+else
+    sudo -H -u builder "$yay" "$@"
+fi
