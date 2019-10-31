@@ -1,5 +1,5 @@
 #!/bin/sh
-yay="yay-original"
+yay="/usr/bin/yay"
 if [[ $EUID -ne 0 ]]; then
     "$yay" "$@"
 else
