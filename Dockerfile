@@ -1,7 +1,7 @@
 FROM archlinux/base
 # installing yay
 RUN pacman -Syu --noconfirm && \
-    pacman -S --noconfirm git binutils sudo go make gcc fakeroot gawk && \
+    pacman -S --noconfirm git binutils sudo go make gcc fakeroot gawk file && \
     git clone https://aur.archlinux.org/yay.git && \
     useradd builder -m && \
     passwd -d builder && \
