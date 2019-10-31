@@ -10,6 +10,6 @@ RUN pacman -Syu --noconfirm && \
     su - builder -c "cd /yay && makepkg -s" && \
     pacman -U --noconfirm /yay/yay-*.pkg.tar* && \
     pacman -R --noconfirm go make gcc gawk && \
-    rm -rf /var/cache
+    rm -rf /var/cache /yay
 
 ADD yay /usr/local/bin
